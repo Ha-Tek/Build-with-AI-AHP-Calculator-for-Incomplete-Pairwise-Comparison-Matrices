@@ -1,4 +1,4 @@
-# AI-for-App-Building: AHP calculator for incomplete pairwise comparison matrices
+# Building AHP calculator for incomplete pairwise comparison matrices
 
 
 Prompt with Gemini in Google AI Studio as  follows:
