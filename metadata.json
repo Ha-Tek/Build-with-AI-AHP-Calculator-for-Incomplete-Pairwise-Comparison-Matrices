@@ -1,0 +1,6 @@
+{
+  "name": "Incomplete PCM Completion & AHP Calculator",
+  "description": "Interactive calculator and comparative dashboard for completing incomplete pairwise comparison matrices using all 11 scientific methods from Tekile, Brunelli, & Fedrizzi (2023).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
