@@ -1,48 +1,61 @@
-# Building AHP calculator for incomplete pairwise comparison matrices
+# Build with AI: Business Performance Simulator Using E-Commerce Data (Trouser Sales Data)
 
+**A hands-on project from Coursera**
 
-Prompt with Gemini in Google AI Studio as  follows:
+Extract customer e-commerce reviews from an image (screenshot), convert them into a structured Google Sheet, and perform data analysis using Gemini's `=AI()` function.
 
-Act as an expert in **AHP, numerical methods, and web application development**.
+## Project Overview
 
-Using the **attached research paper as the authoritative source (https://www.sciencedirect.com/science/article/pii/S2214716023000076)**, build an interactive calculator for **completing incomplete pairwise comparison matrices (PCMs)** using the **11 methods described in the paper**.
+**Turn screenshots into data insights with Gemini in Google Sheets.**
 
-### Requirements
+This project demonstrates how to use AI to convert unstructured data into a usable format and apply AI-powered spreadsheet functions to perform complex operations repeatedly without requiring advanced technical knowledge.
 
-1. Extract and correctly implement all 11 methods exactly as presented in the paper.
-2. Allow users to:
+The project shows how to use the **Gemini app** and **Gemini in Google Sheets** to:
 
-   * Enter an incomplete pairwise comparison matrix.
-   * Automatically enforce reciprocal values and diagonal = 1.
-   * Select one method or run all 11 methods.
-3. For each method, calculate:
+* Extract unstructured data from an image.
+* Convert extracted information into structured data.
+* Organize the data in Google Sheets.
+* Analyze the data using the `=AI()` function.
+* Generate insights using natural-language prompts.
 
-   * Completed matrix
-   * Estimated missing comparisons
-   * Priority/weight vector
-   * λmax
-   * CI
-   * CR
-   * Consistency status
-4. Build a **visual dashboard** comparing all 11 methods, including:
+## Key Activities
 
-   * CR comparison
-   * Priority-weight comparison
-   * Estimated missing-value comparison
-   * Final ranking comparison
-5. Highlight methods that pass/fail the CR threshold (default **CR ≤ 0.10**).
-6. Validate the implementation against the **numerical examples in the paper** and report any discrepancies.
-7. Provide clear error handling, calculation details, and warnings for invalid or insufficient input.
-8. Allow results to be exported to **Excel/CSV**.
+### 1. Extract Data from an Image
 
-### Technology
+Use multimodal prompting to extract customer e-commerce review information from a screenshot and convert it into structured data.
 
-Prefer **Python + Streamlit + NumPy + Pandas + SciPy + Plotly**.
+### 2. Organize the Data
 
-Organize the code into modular components for the 11 methods, matrix validation, consistency calculations, dashboard, and tests.
+Transfer the extracted information into a Google Sheet and organize it into a format suitable for analysis.
 
-**Important:** Do not substitute generic matrix-completion techniques for the 11 methods in the paper. Preserve the paper's equations, assumptions, and calculation procedures.
+### 3. Analyze Data with Gemini
 
+Use the `=AI()` function in Google Sheets to analyze the data using natural-language instructions.
 
-- - Note: Result deployed, use Google Chrome - 
-  https://aistudio.google.com/apps/01782b1b-d42d-494e-9e45-976704c57287?showAssistant=true&showPreview=true
+Instead of writing complex spreadsheet formulas, describe what you want to accomplish in your own words and let Gemini perform the analysis.
+
+## What You'll Gain
+
+### New Insights
+
+Unlock valuable information trapped in images, PDFs, screenshots, and other non-traditional data sources.
+
+### Easier Analysis
+
+Use natural-language prompts in Google Sheets to analyze information without needing to learn complex spreadsheet formulas.
+
+### More Time for Strategy
+
+Spend less time on manual data entry and repetitive analysis, and more time interpreting results and acting on insights.
+
+## Key Skills Demonstrated
+
+* Multimodal AI prompting
+* Image-to-structured-data extraction
+* Google Sheets
+* Gemini in Google Sheets
+* `=AI()` function
+* E-commerce data analysis
+* Unstructured data transformation
+* Natural-language data analysis
+* AI-assisted business intelligence
