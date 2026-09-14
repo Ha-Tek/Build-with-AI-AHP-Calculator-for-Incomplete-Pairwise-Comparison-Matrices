@@ -1,61 +1,171 @@
-# Build with AI: Business Performance Simulator Using E-Commerce Data (Trouser Sales Data)
+# Building an AHP Calculator for Incomplete Pairwise Comparison Matrices
 
-**A hands-on project from Coursera**
-
-Extract customer e-commerce reviews from an image (screenshot), convert them into a structured Google Sheet, and perform data analysis using Gemini's `=AI()` function.
+An interactive **Analytic Hierarchy Process (AHP)** calculator for completing incomplete pairwise comparison matrices (PCMs) using the **11 methods described in the referenced research paper**.
 
 ## Project Overview
 
-**Turn screenshots into data insights with Gemini in Google Sheets.**
+The application was developed by prompting **Gemini in Google AI Studio** to act as an expert in:
 
-This project demonstrates how to use AI to convert unstructured data into a usable format and apply AI-powered spreadsheet functions to perform complex operations repeatedly without requiring advanced technical knowledge.
+* Analytic Hierarchy Process (AHP)
+* Numerical methods
+* Matrix completion
+* Web application development
 
-The project shows how to use the **Gemini app** and **Gemini in Google Sheets** to:
+### Authoritative Research Source
 
-* Extract unstructured data from an image.
-* Convert extracted information into structured data.
-* Organize the data in Google Sheets.
-* Analyze the data using the `=AI()` function.
-* Generate insights using natural-language prompts.
+The implementation is based on the following research paper:
 
-## Key Activities
+[ScienceDirect Research Paper](https://www.sciencedirect.com/science/article/pii/S2214716023000076)
 
-### 1. Extract Data from an Image
+> **Important:** The 11 methods described in the paper are implemented according to the equations, assumptions, and calculation procedures presented in the research paper. Generic matrix-completion techniques should not be substituted for the methods described in the paper.
 
-Use multimodal prompting to extract customer e-commerce review information from a screenshot and convert it into structured data.
+## Prompt Used in Google AI Studio
 
-### 2. Organize the Data
+```text
+Act as an expert in AHP, numerical methods, and web application development.
 
-Transfer the extracted information into a Google Sheet and organize it into a format suitable for analysis.
+Using the attached research paper as the authoritative source, build an interactive calculator for completing incomplete pairwise comparison matrices (PCMs) using the 11 methods described in the paper.
 
-### 3. Analyze Data with Gemini
+Requirements:
 
-Use the `=AI()` function in Google Sheets to analyze the data using natural-language instructions.
+1. Extract and correctly implement all 11 methods exactly as presented in the paper.
 
-Instead of writing complex spreadsheet formulas, describe what you want to accomplish in your own words and let Gemini perform the analysis.
+2. Allow users to:
+   - Enter an incomplete pairwise comparison matrix.
+   - Automatically enforce reciprocal values and diagonal = 1.
+   - Select one method or run all 11 methods.
 
-## What You'll Gain
+3. For each method, calculate:
+   - Completed matrix
+   - Estimated missing comparisons
+   - Priority/weight vector
+   - λmax
+   - CI
+   - CR
+   - Consistency status
 
-### New Insights
+4. Build a visual dashboard comparing all 11 methods, including:
+   - CR comparison
+   - Priority-weight comparison
+   - Estimated missing-value comparison
+   - Final ranking comparison
 
-Unlock valuable information trapped in images, PDFs, screenshots, and other non-traditional data sources.
+5. Highlight methods that pass/fail the CR threshold (default CR ≤ 0.10).
 
-### Easier Analysis
+6. Validate the implementation against the numerical examples in the paper and report any discrepancies.
 
-Use natural-language prompts in Google Sheets to analyze information without needing to learn complex spreadsheet formulas.
+7. Provide clear error handling, calculation details, and warnings for invalid or insufficient input.
 
-### More Time for Strategy
+8. Allow results to be exported to Excel/CSV.
 
-Spend less time on manual data entry and repetitive analysis, and more time interpreting results and acting on insights.
+Technology:
 
-## Key Skills Demonstrated
+Prefer Python + Streamlit + NumPy + Pandas + SciPy + Plotly.
 
-* Multimodal AI prompting
-* Image-to-structured-data extraction
-* Google Sheets
-* Gemini in Google Sheets
-* `=AI()` function
-* E-commerce data analysis
-* Unstructured data transformation
-* Natural-language data analysis
-* AI-assisted business intelligence
+Organize the code into modular components for:
+- The 11 methods
+- Matrix validation
+- Consistency calculations
+- Dashboard
+- Tests
+
+Important:
+Do not substitute generic matrix-completion techniques for the 11 methods in the paper. Preserve the paper's equations, assumptions, and calculation procedures.
+```
+
+## Key Features
+
+### Incomplete PCM Input
+
+Users can enter an incomplete pairwise comparison matrix. The application automatically:
+
+* Enforces reciprocal values.
+* Sets the diagonal elements to `1`.
+* Validates matrix structure.
+* Detects invalid or insufficient inputs.
+
+### 11 Matrix-Completion Methods
+
+The calculator implements the **11 methods presented in the research paper** and allows users to:
+
+* Run a single method.
+* Run all 11 methods.
+* Compare the resulting solutions.
+
+### Consistency Analysis
+
+For each method, the application calculates:
+
+* Completed pairwise comparison matrix
+* Estimated missing comparisons
+* Priority/weight vector
+* Maximum eigenvalue (`λmax`)
+* Consistency Index (CI)
+* Consistency Ratio (CR)
+* Consistency status
+
+The default consistency criterion is:
+
+```text
+CR ≤ 0.10
+```
+
+Methods that satisfy the threshold are identified separately from those that fail.
+
+## Visual Dashboard
+
+The dashboard provides a visual comparison of the 11 methods, including:
+
+* **Consistency Ratio (CR) comparison**
+* **Priority/weight comparison**
+* **Estimated missing-value comparison**
+* **Final ranking comparison**
+
+This makes it easier to evaluate how different completion methods affect the final AHP results.
+
+## Validation
+
+The implementation is designed to validate its calculations against the **numerical examples provided in the research paper**.
+
+Any discrepancies between the application results and the published examples should be identified and reported for further investigation.
+
+## Technology Stack
+
+| Technology    | Purpose                                       |
+| ------------- | --------------------------------------------- |
+| **Python**    | Core application and numerical implementation |
+| **Streamlit** | Interactive web application                   |
+| **NumPy**     | Matrix and numerical operations               |
+| **Pandas**    | Data processing and tabular results           |
+| **SciPy**     | Numerical and eigenvalue calculations         |
+| **Plotly**    | Interactive visualizations                    |
+
+## Application Structure
+
+The application is organized into modular components for:
+
+```text
+AHP Calculator
+├── 11 Matrix-Completion Methods
+├── Matrix Validation
+├── Consistency Calculations
+├── Priority/Weight Calculation
+├── Ranking
+├── Visualization Dashboard
+└── Testing & Validation
+```
+
+## Export Results
+
+Users can export calculation results for further analysis in:
+
+* **Excel**
+* **CSV**
+
+## Deployment
+
+The application was deployed using **Google AI Studio**.
+
+> **Note:** For the deployed application, use **Google Chrome**.
+
+[Open the Deployed AHP Calculator](https://aistudio.google.com/apps/01782b1b-d42d-494e-9e45-976704c57287?showAssistant=true&showPreview=true)
