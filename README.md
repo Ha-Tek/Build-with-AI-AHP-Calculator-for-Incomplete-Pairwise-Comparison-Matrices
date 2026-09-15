@@ -77,6 +77,10 @@ Do not substitute generic matrix-completion techniques for the 11 methods in the
 
 ### Incomplete PCM Input
 
+<img width="867" height="573" alt="AHP_Calc1" src="https://github.com/user-attachments/assets/b69b3f85-621c-47c6-a0d3-917e3e91e1da" />
+
+
+
 Users can enter an incomplete pairwise comparison matrix. The application automatically:
 
 * Enforces reciprocal values.
@@ -85,6 +89,8 @@ Users can enter an incomplete pairwise comparison matrix. The application automa
 * Detects invalid or insufficient inputs.
 
 ### 11 Matrix-Completion Methods
+
+<img width="870" height="584" alt="Execute_allMethods" src="https://github.com/user-attachments/assets/df4d34eb-e00f-49e2-b5cc-631f03b9e18b" />
 
 The calculator implements the **11 methods presented in the research paper** and allows users to:
 
@@ -114,14 +120,24 @@ Methods that satisfy the threshold are identified separately from those that fai
 
 ## Visual Dashboard
 
-<img width="867" height="603" alt="AHP_Calc" src="https://github.com/user-attachments/assets/2af8d0a3-6f3d-4a72-942d-0c06e19301d4" />
+
 
 The dashboard provides a visual comparison of the 11 methods, including:
 
 * **Consistency Ratio (CR) comparison**
+
+<img width="842" height="560" alt="CR_AHP" src="https://github.com/user-attachments/assets/e842b85e-7794-43df-a269-7c0c94e7308b" />
+
 * **Priority/weight comparison**
+  
+<img width="1086" height="586" alt="Priority_weight" src="https://github.com/user-attachments/assets/8639c2d6-e388-4098-8c66-a10294c54760" />
+
 * **Estimated missing-value comparison**
-* **Final ranking comparison**
+
+
+<img width="976" height="352" alt="Est_Missing_Values" src="https://github.com/user-attachments/assets/09ef4e1f-1a80-42be-9c4d-1410ecde7cdc" />
+
+
 
 This makes it easier to evaluate how different completion methods affect the final AHP results.
 
