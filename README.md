@@ -1,6 +1,7 @@
 # Building an AHP Calculator for Incomplete Pairwise Comparison Matrices
 
-An interactive **Analytic Hierarchy Process (AHP)** calculator for completing incomplete pairwise comparison matrices (PCMs) using the **11 methods described in the referenced research paper**.
+An interactive **Analytic Hierarchy Process (AHP)** calculator for completing incomplete pairwise comparison matrices (PCMs) using the **11 methods described in the referenced research paper ([ScienceDirect Research Paper](https://www.sciencedirect.com/science/article/pii/S2214716023000076)
+)**.
 
 ## Project Overview
 
