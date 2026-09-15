@@ -114,6 +114,8 @@ Methods that satisfy the threshold are identified separately from those that fai
 
 ## Visual Dashboard
 
+<img width="867" height="603" alt="AHP_Calc" src="https://github.com/user-attachments/assets/2af8d0a3-6f3d-4a72-942d-0c06e19301d4" />
+
 The dashboard provides a visual comparison of the 11 methods, including:
 
 * **Consistency Ratio (CR) comparison**
