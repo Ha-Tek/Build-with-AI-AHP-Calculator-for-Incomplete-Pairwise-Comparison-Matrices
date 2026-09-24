@@ -187,4 +187,4 @@ The application was deployed using **Google AI Studio**.
 
 > **Note:** For the deployed application, use **Google Chrome**.
 
-[Open the Deployed AHP Calculator](https://aistudio.google.com/apps/01782b1b-d42d-494e-9e45-976704c57287?showAssistant=true&showPreview=true)
+[Open the Deployed AHP Calculator](https://aistudio.google.com/apps/01782b1b-d42d-494e-9e45-976704c57287?showAssistant=true&showPreview=true&fullscreenApplet=true)
